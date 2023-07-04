@@ -45,7 +45,8 @@ public class AsteroidCollision {
                 {5,10,-5},
                 {8,-8},
                 {10,2,-5},
-                {-2,-2,1,-2}
+                {-2,-2,1,-2},
+                {10,1,2,3,-10}
         };
         for (int[] asteroids : tests){
             System.out.println(Arrays.toString(ac.asteroidCollision(asteroids)));
