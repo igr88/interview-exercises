@@ -1,8 +1,6 @@
 package dev.me.exercises;
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 import java.util.Stack;
 
 /*
@@ -29,7 +27,6 @@ Example 3:
 Input: asteroids = [10,2,-5]
 Output: [10]
 Explanation: The 2 and -5 collide resulting in -5. The 10 and -5 collide resulting in 10.
-
 
 Constraints:
 
@@ -58,12 +55,12 @@ public class AsteroidCollision {
         for (int asteroid : asteroids) {
             if (asteroid > 0) {
                 stack.push(asteroid);
-            } else { // asteroid is moving leftward
-                // Handle multiple collisions whe the asteroid destroys smaller asteroids in the stack
+            } else { // asteroid is moving leftwards
+                // Handle multiple collisions when the asteroid destroys smaller asteroids in the stack
                 while (!stack.isEmpty() && stack.peek() > 0 && stack.peek() < Math.abs(asteroid)) {
                     stack.pop();
                 }
-                // happens the asteroid since all are going to the left
+                // appends the asteroid since all are going to the left
                 if (stack.isEmpty() || stack.peek() < 0) {
                     stack.push(asteroid);
                 } else if (stack.peek() == Math.abs(asteroid)) { // both asteroids are destroyed
@@ -73,9 +70,5 @@ public class AsteroidCollision {
         }
 
         return stack.stream().mapToInt(Integer::intValue).toArray();
-    }
-
-    private Integer getLast(List<Integer> list) {
-        return list.get(list.size()-1);
     }
 }
