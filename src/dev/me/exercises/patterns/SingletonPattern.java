@@ -1,4 +1,4 @@
-package dev.me.exercises;
+package dev.me.exercises.patterns;
 
 import java.util.Scanner;
 
