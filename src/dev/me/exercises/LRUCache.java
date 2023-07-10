@@ -3,6 +3,7 @@ package dev.me.exercises;
 import java.util.ArrayDeque;
 import java.util.Deque;
 import java.util.LinkedHashMap;
+import java.util.LinkedList;
 import java.util.Map;
 
 /*
@@ -52,7 +53,7 @@ public class LRUCache {
 
     public LRUCache(int capacity) {
         this.values = new LinkedHashMap<>(capacity);
-        this.cache = new ArrayDeque<>(capacity);
+        this.cache = new LinkedList<>();
         this.maxCapacity = capacity;
     }
 
