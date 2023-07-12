@@ -86,7 +86,8 @@ public class ProductInArray {
                 {2,3,0,5},
                 {2,0,0,5},
                 {},
-                {13}
+                {13},
+                {2,3,5,7,4,8}
         };
 
         for (int i=0; i<input.length; i++) {
